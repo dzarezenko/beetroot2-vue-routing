@@ -4,7 +4,7 @@
       User
     </div>
     <div class="card-body">
-      <button type="button" class="btn btn-danger" @click="goHome">Danger</button>
+      <button type="button" class="btn btn-danger" @click="goHome">Back Home</button>
     </div>
   </div>
 </template>
@@ -13,7 +13,10 @@
 export default {
   methods: {
     goHome() {
-      this.$router.push("/");
+      this.$router.push({
+        //path: "/"
+        name: "home-page"
+      });
     },
   },
 }

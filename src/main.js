@@ -21,6 +21,7 @@ const router = new VueRouter({
   mode: "history",
   routes: [
     { path: "/", component: Home },
+    { path: "/home", component: Home, name: "home-page" },
     { path: "/user", component: User }
   ],
 });
