@@ -18,6 +18,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 
 const router = new VueRouter({
+  mode: "history",
   routes: [
     { path: "/", component: Home },
     { path: "/user", component: User }

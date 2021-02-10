@@ -4,10 +4,14 @@
       <h1>Some header</h1>
     </header>
 
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/user">User</router-link>
-    </nav>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <router-link class="nav-link" to="/" active-class="active" exact>Home</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link class="nav-link" to="/user" active-class="active">User</router-link>
+      </li>
+    </ul>
 
     <section>
       <router-view></router-view>
@@ -15,3 +19,15 @@
  
   </div>
 </template>
+
+<style>
+h1 {
+  margin-left: 50px;
+}
+ul {
+  margin-left: 50px;
+}
+div.card {
+  margin: 50px;
+}
+</style>

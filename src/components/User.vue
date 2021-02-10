@@ -1,5 +1,10 @@
 <template>
-  <section>
-    <h1>User</h1>
-  </section>
+  <div class="card">
+    <div class="card-header">
+      User
+    </div>
+    <div class="card-body">
+      ...
+    </div>
+  </div>
 </template>
