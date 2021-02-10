@@ -1,11 +1,12 @@
 <template>
   <div class="card">
     <div class="card-header">
-      User
+      User Details
     </div>
     <div class="card-body">
       <p>
-        User ID: {{ userId }}
+        User ID: {{ userId }}<br />
+        Name: {{ $route.query.name }}
       </p>
       <button type="button" class="btn btn-warning" @click="editUser">Edit</button>
     </div>
