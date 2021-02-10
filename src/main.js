@@ -9,6 +9,9 @@ import App from './App.vue'
 
 import Home from "./components/Home";
 import User from "./components/User";
+import UserDetails from "./components/user/UserDetails";
+import UserList from "./components/user/UserList";
+import UserEdit from "./components/user/UserEdit";
 
 Vue.config.productionTip = false
 
@@ -22,8 +25,11 @@ const router = new VueRouter({
   routes: [
     { path: "/", component: Home },
     { path: "/home", component: Home, name: "home-page" },
-    { path: "/user", component: User },
-    { path: "/user/:id", component: User }
+    { path: "/user", component: User, children: [
+      { path: "", component: UserList },
+      { path: ":id", component: UserDetails },
+      { path: ":id/edit", component: UserEdit }
+    ] },
   ],
 });
 
