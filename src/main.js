@@ -13,6 +13,9 @@ import UserDetails from "./components/user/UserDetails";
 import UserList from "./components/user/UserList";
 import UserEdit from "./components/user/UserEdit";
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
@@ -26,7 +29,11 @@ const router = new VueRouter({
     { path: "/", component: Home },
     { path: "/home", component: Home, name: "home-page" },
     { path: "/user", component: User, children: [
-      { path: "", component: UserList },
+      { path: "", components: {
+        default: UserList,
+        header: Header,
+        footer: Footer
+      } },
       { path: ":id", component: UserDetails },
       { path: ":id/edit", component: UserEdit }
     ] },
